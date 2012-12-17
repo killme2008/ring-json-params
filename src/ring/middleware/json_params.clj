@@ -13,7 +13,7 @@
       (let [bstr (slurp body)
             ]
         (if (not-empty bstr)
-          (let [            json-params (json/read-str bstr)
+          (let [json-params (json/read-str bstr)
                 req* (assoc req
                        :json-params json-params
                        :params (merge (:params req) json-params))]
